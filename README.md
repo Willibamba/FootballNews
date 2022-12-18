@@ -12,13 +12,16 @@ The project challenges and helps me to learn and broaden my knowledge in Python,
 You can also view the Software packages for this application in rquirements.txt file.
 
 #### Reporter page, Registration and Login page and article form page
+![reporter gif](https://user-images.githubusercontent.com/101418845/208290062-eb7b5399-da41-4909-8c78-ec58f9a9f616.gif)
 
 <img src="https://reporter.gif.gif" width="100px">
 
 #### News page and news view page
+![news_detail gif](https://user-images.githubusercontent.com/101418845/208290068-b373184b-3e21-4f95-998d-56e52647f56e.gif)
 
 <img src="https://news_detail.gif.gif" width="100px">
 
 #### Word Cup page, Women page and Men page
+![wmf gif](https://user-images.githubusercontent.com/101418845/208290070-81a56acc-df1d-4e28-9b0b-59c82f3e8221.gif)
 
 <img src="https://wmf.gif.gif" width="100px">
