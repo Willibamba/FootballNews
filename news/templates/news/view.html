@@ -1,0 +1,21 @@
+{% extends "news/layout.html" %}
+{% load static %}
+
+{% block title %}
+    news report
+{% endblock %}
+
+{% block main %}
+    
+        {% if article %}        
+            <h3>{{ article.title }}</h3>
+            <img class="view-image" src="{{ MEDIA_URL }}{{ article.article_image }}" alt="news photo">
+            <span class="datetime">PUBLISHED {{ article.created_on|timesince }} AGO</span>
+            <span><b>Reported by {{ article.reporter_details.first_name }} {{ article.reporter_details.last_name }}</span>
+            {% autoescape on %}
+            <pre><p>{{ article.body }}</p></pre>
+            {% endautoescape %}       
+        {% endif %}
+       
+{% endblock %}
+

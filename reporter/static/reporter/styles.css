@@ -1,0 +1,127 @@
+/* Responsive styling for screen sizes */
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+@media only screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+nav {
+    background-color: red;
+    color: white;
+}
+
+.logo {
+    height: auto;
+    width: 75px;
+    padding-left: 10px;
+}
+
+.links a {
+    color: white; 
+    display: inline;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width:480px) {
+    .links a {
+        padding-right: none;
+        font-size: 6px;
+    }
+}
+
+.nav-link:hover {
+    background-color: #555;
+    color: white;
+}
+
+footer {
+    color: white;
+    background-color: red;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:480px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+.register {
+    width: 40%;
+    padding-left: 5%;
+    margin-bottom: 20px;
+}
+
+.login {
+    padding-left: 20%;
+}
+
+@media only screen and (max-width:480px){
+    .login {
+        padding-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+@media only screen and (min-width:480px) {
+    p {
+        padding-left: 10%;
+    }
+}
+
+
+label {
+    font-weight: bold;
+}
+
+.message {
+    color: red;
+    font-size: medium;
+    text-align: center;
+}
+
+.wrapper1 {
+    background-color: #F5F5F5;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.upload-image{
+    float: right;
+}

@@ -1,0 +1,46 @@
+{% extends "reporter/layout.html" %}
+
+{% block title %}
+    Article form
+{% endblock %}
+
+{% block main %}
+
+    {% if messages %}
+        {% for message in messages %}
+        <h3 style="color: green;">{{ message }}</h3>
+        {% endfor %}
+    {% endif %}  
+    
+    <div class="wrapper1">
+
+        <h1 class="mb-4">Please fill in the form for your news article</h1>
+
+        <form action="article" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="date">Date</label>
+                <input type="date" name="date" value="11-22-2022" required>
+                <div class="upload-image">
+                    <label for="image">Upload Image</label>
+                    <input type="file" name="image" accept="image/*" required>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="category">Article Category</label>
+                <input type="text" name="category" required>
+                <span>Please enter "World Cup or Male or Female"</span>
+            </div>
+            <div class="form-group mb-3">
+                <label for="title">Title of the Article</label>
+                <textarea class="form-control" name="title" type="text" rows="2" required></textarea>
+            </div>
+            <div class="form-group mb-5">
+                <label for="body">Body of the Article</label>
+                <textarea class="form-control" id="validationTextarea" autocomplete="off" autofocus name="body" type="text" rows="10" required></textarea>               
+            </div>
+            <button class="btn btn-primary mb-5" type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}

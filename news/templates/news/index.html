@@ -1,0 +1,32 @@
+{% extends "news/layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    News
+{% endblock %}
+
+{% block main %}
+    
+       {% if articles %}
+       <div class="articles">      
+            {% for article in articles %}                        
+                    {% if article %}
+                    <div class="news_headline">                     
+                        <a style="text-decoration: none; color:black" href="{% url 'view' article.id %}">
+                        <div  class="headline">
+                                <img src="{{ MEDIA_URL }}{{ article.article_image}}" width="279px" height="157px" alt="news photo">                               
+                                <h2>
+                                    <span class="datetime">{{ article.created_on|timesince }} AGO</span>
+                                    <b><span>{{ article.article_category }}:</span></b>
+                                    <span>{{ article.title }}</span>
+                                </h2>
+                        </div>
+                        </a>                   
+                    </div>
+                    {% endif %}                         
+                {% endfor %}
+            </div>
+        {% endif %}     
+
+{% endblock %}

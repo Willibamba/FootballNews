@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS only -->
+        <link href="{% static 'news/styles.css' %}" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <title>
+            Willis Football News: {% block title %} {% endblock %}
+        </title>
+    </head>
+
+    <body>
+
+        <header class="sticky-top">
+            <nav class="navbar container-fluid">
+                <img class="logo" src="{% static 'news/foot.png' %}" alt="football logo">
+                <div class="position-absolute top-50 start-50 translate-middle align-items-center">
+                    <a class="navbar-brand text-white"><b><i>FootballNews</i></b></a>
+                </div>
+                <div class="links">
+                    <a class="nav-link" id="active" href="/">News</a>
+                    <a class="nav-link" href="{% url 'world_cup' %}">World Cup</a>
+                    <a class="nav-link" href="{% url 'female' %}">Women</a>
+                    <a class="nav-link" href="{% url 'male' %}">Men</a>
+                    <a class="nav-link" href="{% url 'reporter' %}">Reporter</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-3">
+            {% block main %} {% endblock %}
+        </main>
+
+        <footer class="fixed-bottom text-center">
+            <b><i>&copy; 2022 FootballNews Inc.</i></b>
+        </footer>
+
+    </body>
+
+</html>
