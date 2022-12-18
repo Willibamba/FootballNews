@@ -1,6 +1,6 @@
 # FootballNews
 
-#### Video Demo: <https://https://youtu.be/slt4mXMrp4Y>
+#### Video Demo: <https://youtu.be/slt4mXMrp4Y>
 
 #### Description:
 FootballNews Wep App is a Full-Stack project developed to help football news reporters the ability to register to enable them to write and post their football news articles which can be stored in the database and dynamically generate to the web page to view and read. The app have the features for registration, login, article writing form, news headlines and detailed news view.
