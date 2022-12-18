@@ -1,0 +1,53 @@
+{% extends "reporter/layout.html" %}
+
+{% block title %}
+    Registration and Login
+{% endblock %}
+
+{% block main %}
+
+    <h3>Please fill in the Registration for an account or login </h3>
+    {% if messages %} 
+        <p class="message">{{ messages }}</p> 
+    {% endif %}
+    <div class="wrapper mb-3">
+        <div class="register">
+            <h1>Register</h1>
+            <form action="register" method="post">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    <label for="first_name">First Name</label>
+                    <input class="form-control" name="first_name" type="text">
+                    <label for="last_name">Last Name</label>
+                    <input class="form-control" name="last_name" type="text">
+                    <label for="email">E-mail</label>
+                    <input class="form-control" name="email" type="text">
+                    <label for="password">Password</label>
+                    <input class="form-control" name="password" type="password">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input class="form-control" name="confirm_password" type="password">
+                </div>
+                <button class="btn btn-primary" type="submit">Register</button>
+            </form>
+        </div>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="login" method="post">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    <label for="email">E-mail</label>
+                    <input class="form-control" name="email" type="text">
+                    <label for="password">Password</label>
+                    <input class="form-control" name="password" type="password">
+                </div>
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <b><p>NOTE:</p></b>
+    <i>
+        <p>You must have a valid e-mail address</p>
+        <p>Make sure your password is strong</p>
+        <p>Your password must be at least 8 characters long</p>
+    </i>
+{% endblock %}
